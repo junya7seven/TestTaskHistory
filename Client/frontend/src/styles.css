@@ -1,0 +1,15 @@
+/* 1. Сначала импортируем файл темы с помощью @import или @use */
+/* Если ваш custom-theme.scss использует @use, то здесь должен быть @use: */
+@use 'src/custom-theme.scss'; 
+
+/* 2. Теперь, после всех @use и @import, размещаем ваши глобальные стили */
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+/* Здесь могут быть другие глобальные стили */

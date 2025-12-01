@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\junya\\source\\repos\\History\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|c:\\users\\junya\\source\\repos\\history\\backend\\history\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|solutionrelative:history\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\junya\\source\\repos\\History\\Backend\\History\\Program.cs",
+              "RelativeDocumentMoniker": "History\\Program.cs",
+              "ToolTip": "C:\\Users\\junya\\source\\repos\\History\\Backend\\History\\Program.cs",
+              "RelativeToolTip": "History\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T09:55:13.347Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

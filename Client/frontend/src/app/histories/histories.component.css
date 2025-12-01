@@ -1,0 +1,49 @@
+h2{
+  justify-self: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap; 
+    width: 100%; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+}
+.column-toggles{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap; 
+    width: 100%; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+}
+
+.history-container {
+  position: relative;
+  overflow-x: auto; 
+}
+
+.mat-table {
+  table-layout: fixed; 
+  min-width: 880px; 
+  width: max-content; 
+}
+
+#resize-line {
+  position: absolute;
+  top: 0;
+  bottom: 0; 
+  width: 2px;
+  z-index: 1000; 
+  cursor: col-resize;
+  display: none; 
+}
+
+
+.mat-header-cell {
+  padding-right: 15px !important; 
+  user-select: none; 
+}

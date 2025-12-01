@@ -1,0 +1,138 @@
+<div #root class="history-container">
+  
+  
+  <h2>История пользователей</h2>
+
+  <div class="filters">
+    <mat-form-field appearance="outline">
+      <mat-label>Text Filter</mat-label>
+      <input matInput [(ngModel)]="textFilter" (ngModelChange)="onFilterChange()">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>User Filter</mat-label>
+      <input matInput [(ngModel)]="userFilter" (ngModelChange)="onFilterChange()">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Event Type Filter</mat-label>
+      <input matInput [(ngModel)]="eventTypeFilter" (ngModelChange)="onFilterChange()">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Start Date</mat-label>
+      <input matInput [matDatepicker]="startPicker" [(ngModel)]="startDate" (dateChange)="onFilterChange()">
+      <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+      <mat-datepicker #startPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>End Date</mat-label>
+      <input matInput [matDatepicker]="endPicker" [(ngModel)]="endDate" (dateChange)="onFilterChange()">
+      <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+      <mat-datepicker #endPicker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="column-toggles">
+    <mat-checkbox *ngFor="let col of allColumns"
+                  [checked]="displayedColumns.includes(col)"
+                  (change)="toggleColumn(col)">
+      {{ col }}
+    </mat-checkbox>
+  </div>
+
+  <div id="resize-line"></div>
+  
+  <div class="table-wrapper">
+    <table mat-table *ngIf="dataSource.length" [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef
+            [style.width.px]="columnWidths['id']"
+            (mousemove)="setResizeCursor($event, 'id')"
+            (mousedown)="onResizeStart($event, 'id')"
+            (click)="sortBy('id')"
+            style="user-select:none;">
+          ID {{ getSortIndicator('id') }}
+          <span *ngIf="isSorted('id')"
+                (click)="removeSortColumn('id'); $event.stopPropagation()"
+                style="color:gray; cursor:pointer; margin-left:5px;">×</span>
+        </th>
+        <td mat-cell *matCellDef="let row" [style.width.px]="columnWidths['id']">{{ row.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="text">
+        <th mat-header-cell *matHeaderCellDef
+            [style.width.px]="columnWidths['text']"
+            (mousemove)="setResizeCursor($event, 'text')"
+            (mousedown)="onResizeStart($event, 'text')"
+            (click)="sortBy('text')"
+            style="user-select:none;">
+          Text {{ getSortIndicator('text') }}
+          <span *ngIf="isSorted('text')"
+                (click)="removeSortColumn('text'); $event.stopPropagation()"
+                style="color:gray; cursor:pointer; margin-left:5px;">×</span>
+        </th>
+        <td mat-cell *matCellDef="let row" [style.width.px]="columnWidths['text']">{{ row.text }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fullName">
+        <th mat-header-cell *matHeaderCellDef
+            [style.width.px]="columnWidths['fullName']"
+            (mousemove)="setResizeCursor($event, 'fullName')"
+            (mousedown)="onResizeStart($event, 'fullName')"
+            (click)="sortBy('fullName')"
+            style="user-select:none;">
+          User {{ getSortIndicator('fullName') }}
+          <span *ngIf="isSorted('fullName')"
+                (click)="removeSortColumn('fullName'); $event.stopPropagation()"
+                style="color:gray; cursor:pointer; margin-left:5px;">×</span>
+        </th>
+        <td mat-cell *matCellDef="let row" [style.width.px]="columnWidths['fullName']">{{ row.fullName }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="dateTime">
+        <th mat-header-cell *matHeaderCellDef
+            [style.width.px]="columnWidths['dateTime']"
+            (mousemove)="setResizeCursor($event, 'dateTime')"
+            (mousedown)="onResizeStart($event, 'dateTime')"
+            (click)="sortBy('dateTime')"
+            style="user-select:none;">
+          Date {{ getSortIndicator('dateTime') }}
+          <span *ngIf="isSorted('dateTime')"
+                (click)="removeSortColumn('dateTime'); $event.stopPropagation()"
+                style="color:gray; cursor:pointer; margin-left:5px;">×</span>
+        </th>
+        <td mat-cell *matCellDef="let row" [style.width.px]="columnWidths['dateTime']">
+          {{ row.dateTime | date:'dd/MM/yyyy HH:mm' }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="eventType">
+        <th mat-header-cell *matHeaderCellDef
+            [style.width.px]="columnWidths['eventType']"
+            (mousemove)="setResizeCursor($event, 'eventType')"
+            (mousedown)="onResizeStart($event, 'eventType')"
+            (click)="sortBy('eventType')"
+            style="user-select:none;">
+          Event Type {{ getSortIndicator('eventType') }}
+          <span *ngIf="isSorted('eventType')"
+                (click)="removeSortColumn('eventType'); $event.stopPropagation()"
+                style="color:gray; cursor:pointer; margin-left:5px;">×</span>
+        </th>
+        <td mat-cell *matCellDef="let row" [style.width.px]="columnWidths['eventType']">{{ row.eventType }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+  <mat-paginator *ngIf="totalCount"
+                  [length]="totalCount"
+                  [pageSize]="pageSize"
+                  [pageSizeOptions]="[5,10,20,100]"
+                  (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
