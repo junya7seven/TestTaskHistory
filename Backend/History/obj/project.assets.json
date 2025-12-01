@@ -2009,11 +2009,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\History.csproj",
+      "projectUniqueName": "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\History\\History.csproj",
       "projectName": "History",
-      "projectPath": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\History.csproj",
+      "projectPath": "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\History\\History.csproj",
       "packagesPath": "C:\\Users\\junya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\obj\\",
+      "outputPath": "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\History\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2034,17 +2034,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Application\\Application.csproj"
+            "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Application\\Application.csproj"
             },
-            "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Data\\Data.csproj"
+            "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Data\\Data.csproj"
             },
-            "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Entities\\Entities.csproj"
+            "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Interfaces\\Interfaces.csproj"
+            "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\junya\\Documents\\qweqweqwe\\TestTaskHistory\\Backend\\Interfaces\\Interfaces.csproj"
             }
           }
         }

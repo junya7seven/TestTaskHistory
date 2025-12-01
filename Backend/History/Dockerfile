@@ -11,6 +11,7 @@ COPY Backend/History/History.csproj Backend/History/
 RUN dotnet restore Backend/History/History.csproj
 
 COPY . .
+RUN dotnet build Backend/History/History.csproj
 
 RUN dotnet publish Backend/History/History.csproj -c Release -o /app/publish
 
