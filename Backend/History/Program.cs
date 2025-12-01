@@ -15,18 +15,21 @@ builder.Services.AddDataBase(builder.Configuration);
 builder.Services.AddManagers();
 builder.Services.AddServices();
 
+
+const string AllowPolicyName = "AllowAll";
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy(AllowPolicyName, policy =>
     {
-        policy.AllowAnyMethod();
-        policy.AllowAnyOrigin();
-        policy.AllowAnyHeader();
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
     });
 });
 
 var app = builder.Build();
-app.UseCors("AllowAll");
+app.UseCors(AllowPolicyName);
 
 
 try

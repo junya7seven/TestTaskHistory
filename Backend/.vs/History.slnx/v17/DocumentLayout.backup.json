@@ -1,9 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\junya\\source\\repos\\History\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|c:\\users\\junya\\source\\repos\\history\\backend\\history\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|c:\\users\\junya\\documents\\rerere\\testtaskhistory\\backend\\data\\managers\\filters\\historyqueryfiltersextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|solutionrelative:data\\managers\\filters\\historyqueryfiltersextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|c:\\users\\junya\\documents\\rerere\\testtaskhistory\\backend\\history\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|solutionrelative:history\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|c:\\users\\junya\\documents\\rerere\\testtaskhistory\\backend\\history\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|solutionrelative:history\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|c:\\users\\junya\\documents\\rerere\\testtaskhistory\\backend\\data\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE8E2E54-CA0B-F6F5-0102-F79722AD1421}|Data\\Data.csproj|solutionrelative:data\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|c:\\users\\junya\\documents\\rerere\\testtaskhistory\\backend\\history\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6D2466-FE30-6203-0B94-088DA0CC1429}|History\\History.csproj|solutionrelative:history\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,15 +35,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\junya\\source\\repos\\History\\Backend\\History\\Program.cs",
-              "RelativeDocumentMoniker": "History\\Program.cs",
-              "ToolTip": "C:\\Users\\junya\\source\\repos\\History\\Backend\\History\\Program.cs",
-              "RelativeToolTip": "History\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
+              "Title": "HistoryQueryFiltersExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Data\\Managers\\Filters\\HistoryQueryFiltersExtensions.cs",
+              "RelativeDocumentMoniker": "Data\\Managers\\Filters\\HistoryQueryFiltersExtensions.cs",
+              "ToolTip": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Data\\Managers\\Filters\\HistoryQueryFiltersExtensions.cs",
+              "RelativeToolTip": "Data\\Managers\\Filters\\HistoryQueryFiltersExtensions.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwCoAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T09:55:13.347Z",
+              "WhenOpened": "2025-12-01T14:03:59.152Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\Controllers\\HistoryController.cs",
+              "RelativeDocumentMoniker": "History\\Controllers\\HistoryController.cs",
+              "ToolTip": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\Controllers\\HistoryController.cs",
+              "RelativeToolTip": "History\\Controllers\\HistoryController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwCYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T13:50:32.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Data\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Data\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\Data\\DependencyInjection.cs",
+              "RelativeToolTip": "Data\\DependencyInjection.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwB4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T11:18:10.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\appsettings.json",
+              "RelativeDocumentMoniker": "History\\appsettings.json",
+              "ToolTip": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\appsettings.json",
+              "RelativeToolTip": "History\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-01T11:17:59.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\Program.cs",
+              "RelativeDocumentMoniker": "History\\Program.cs",
+              "ToolTip": "C:\\Users\\junya\\Documents\\rerere\\TestTaskHistory\\Backend\\History\\Program.cs",
+              "RelativeToolTip": "History\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwCsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T09:55:13.347Z"
             }
           ]
         }

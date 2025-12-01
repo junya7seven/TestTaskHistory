@@ -20,29 +20,32 @@ namespace History.Controllers
             string OrderBy, string? TextFilter, string? UserFilter, string? EventTypeFilter,
             DateTime? StartDate, DateTime? EndDate)
         {
-            var HistoryQueryFilters = new HistoryQueryFilters()
+            try
             {
-                CurrentPage = CurrentPage,
-                PageSize = PageSize,
-                OrderBy = OrderBy,
-                TextFilter = TextFilter,
-                UserFilter = UserFilter,
-                EventTypeFilter = EventTypeFilter,
-                StartDate = StartDate,
-                EndDate = EndDate
-            };
+                var HistoryQueryFilters = new HistoryQueryFilters()
+                {
+                    CurrentPage = CurrentPage,
+                    PageSize = PageSize,
+                    OrderBy = OrderBy,
+                    TextFilter = TextFilter,
+                    UserFilter = UserFilter,
+                    EventTypeFilter = EventTypeFilter,
+                    StartDate = StartDate,
+                    EndDate = EndDate
+                };
 
-            var (histories, count) = await _historyService.GetAll(HistoryQueryFilters);
-            var result = new PagginatedHistory()
-            {
-                Histories = histories,
-                TotalCount = count
-            };
-            if (result.Histories != null)
-            {
+                var (histories, count) = await _historyService.GetAll(HistoryQueryFilters);
+                var result = new PagginatedHistory()
+                {
+                    Histories = histories,
+                    TotalCount = count
+                };
                 return Ok(result);
             }
-            return BadRequest("Ошибка сервера");
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

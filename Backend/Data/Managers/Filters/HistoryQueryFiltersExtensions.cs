@@ -17,7 +17,7 @@ namespace Data.Managers.Filters
         /// <param name="filters"></param>
         /// <returns></returns>
         public static IQueryable<History> ApplyFilters(
-        this IQueryable<History> query, HistoryQueryFilters filters)
+    this IQueryable<History> query, HistoryQueryFilters filters)
         {
             if (!string.IsNullOrWhiteSpace(filters.TextFilter))
                 query = query.Where(h => h.Text.Contains(filters.TextFilter));
@@ -28,11 +28,21 @@ namespace Data.Managers.Filters
             if (!string.IsNullOrWhiteSpace(filters.EventTypeFilter))
                 query = query.Where(h => h.EventType.Name.Contains(filters.EventTypeFilter));
 
+
             if (filters.StartDate.HasValue)
-                query = query.Where(h => h.DateTime >= filters.StartDate.Value.Date);
+            {
+                var startDateValue = filters.StartDate.Value.Date;
+                var startDateUtc = DateTime.SpecifyKind(startDateValue, DateTimeKind.Utc);
+                query = query.Where(h => h.DateTime >= startDateUtc);
+            }
 
             if (filters.EndDate.HasValue)
-                query = query.Where(h => h.DateTime < filters.EndDate.Value.Date.AddDays(1));
+            {
+                var endDateValue = filters.EndDate.Value.Date;
+                var endDateUtc = DateTime.SpecifyKind(endDateValue, DateTimeKind.Utc);
+                query = query.Where(h => h.DateTime < endDateUtc.AddDays(1));
+            }
+
 
             return query;
         }

@@ -24,9 +24,16 @@ namespace Data
         public static IServiceCollection AddDataBase(this IServiceCollection services,
             IConfiguration configuration)
         {
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new Exception("Не задана строка подключения");
+            }
+
             services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseNpgsql(configuration.GetConnectionString("defaultConnection"),
+                options.UseNpgsql(connectionString,
                     b => b.MigrationsAssembly("History"));
             });
 
