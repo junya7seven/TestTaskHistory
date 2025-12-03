@@ -20,13 +20,16 @@ namespace Data.Managers.Filters
     this IQueryable<History> query, HistoryQueryFilters filters)
         {
             if (!string.IsNullOrWhiteSpace(filters.TextFilter))
-                query = query.Where(h => h.Text.Contains(filters.TextFilter));
+                query = query.Where(h => h.Text.ToLower()
+                .Contains(filters.TextFilter.ToLower()));
 
             if (!string.IsNullOrWhiteSpace(filters.UserFilter))
-                query = query.Where(h => h.User.FullName.Contains(filters.UserFilter));
+                query = query.Where(h => h.User.FullName.ToLower()
+                .Contains(filters.UserFilter.ToLower()));
 
             if (!string.IsNullOrWhiteSpace(filters.EventTypeFilter))
-                query = query.Where(h => h.EventType.Name.Contains(filters.EventTypeFilter));
+                query = query.Where(h => h.EventType.Name.ToLower()
+                .Contains(filters.EventTypeFilter.ToLower()));
 
 
             if (filters.StartDate.HasValue)

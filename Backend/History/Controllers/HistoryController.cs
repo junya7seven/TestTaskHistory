@@ -16,24 +16,10 @@ namespace History.Controllers
         }
 
         [HttpGet("getall")]
-        public async Task<IActionResult> Get(int CurrentPage, int PageSize,
-            string OrderBy, string? TextFilter, string? UserFilter, string? EventTypeFilter,
-            DateTime? StartDate, DateTime? EndDate)
+        public async Task<IActionResult> Get([FromQuery] HistoryQueryFilters HistoryQueryFilters)
         {
             try
             {
-                var HistoryQueryFilters = new HistoryQueryFilters()
-                {
-                    CurrentPage = CurrentPage,
-                    PageSize = PageSize,
-                    OrderBy = OrderBy,
-                    TextFilter = TextFilter,
-                    UserFilter = UserFilter,
-                    EventTypeFilter = EventTypeFilter,
-                    StartDate = StartDate,
-                    EndDate = EndDate
-                };
-
                 var (histories, count) = await _historyService.GetAll(HistoryQueryFilters);
                 var result = new PagginatedHistory()
                 {
