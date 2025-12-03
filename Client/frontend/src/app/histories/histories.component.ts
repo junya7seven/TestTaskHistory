@@ -99,13 +99,20 @@ export class HistoriesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subscriptions.unsubscribe();
   }
 
-  onFilterChange() {
-    this.filterSubject.next({
-      text: this.textFilter,
-      user: this.userFilter,
-      event: this.eventTypeFilter
-    });
+onFilterChange() {
+  this.currentPage = 1;
+
+  if (this.paginator) {
+    this.paginator.firstPage();
   }
+
+  this.filterSubject.next({
+    text: this.textFilter,
+    user: this.userFilter,
+    event: this.eventTypeFilter
+  });
+}
+
   private formatDate(date: Date): string {
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
