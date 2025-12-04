@@ -34,16 +34,17 @@ namespace Data.Managers.Filters
 
             if (filters.StartDate.HasValue)
             {
-                var startDateValue = filters.StartDate.Value.Date;
-                var startDateUtc = DateTime.SpecifyKind(startDateValue, DateTimeKind.Utc);
-                query = query.Where(h => h.DateTime >= startDateUtc);
+                var startLocal = DateTime.SpecifyKind(filters.StartDate.Value.Date, DateTimeKind.Local);
+                var startUtc = startLocal.ToUniversalTime();
+                query = query.Where(h => h.DateTime >= startUtc);
             }
 
             if (filters.EndDate.HasValue)
             {
-                var endDateValue = filters.EndDate.Value.Date;
-                var endDateUtc = DateTime.SpecifyKind(endDateValue, DateTimeKind.Utc);
-                query = query.Where(h => h.DateTime < endDateUtc.AddDays(1));
+                var endLocal = DateTime.SpecifyKind(filters.EndDate.Value.Date, DateTimeKind.Local);
+                var endOfDayLocal = endLocal.AddDays(1);
+                var endUtc = endOfDayLocal.ToUniversalTime();
+                query = query.Where(h => h.DateTime < endUtc);
             }
 
 
