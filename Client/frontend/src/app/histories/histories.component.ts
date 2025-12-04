@@ -100,11 +100,13 @@ export class HistoriesComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
 onFilterChange() {
-  this.currentPage = 1;
-
-  if (this.paginator) {
-    this.paginator.firstPage();
+  // если конечная дата меньше начальной, сбрасываем её
+  if (this.startDate && this.endDate && this.endDate < this.startDate) {
+    this.endDate = undefined;
   }
+
+  this.currentPage = 1;
+  if (this.paginator) this.paginator.firstPage();
 
   this.filterSubject.next({
     text: this.textFilter,
@@ -112,6 +114,7 @@ onFilterChange() {
     event: this.eventTypeFilter
   });
 }
+
 
   private formatDate(date: Date): string {
     const year = date.getFullYear();
@@ -277,4 +280,7 @@ onResize(event: MouseEvent) {
     
     thElement.style.cursor = isNearBoundary ? 'col-resize' : 'pointer'; 
   }
+
+  
 }
+
